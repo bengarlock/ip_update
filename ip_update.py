@@ -1,5 +1,6 @@
 import requests
 from passwords import return_username, return_password
+from datetime import datetime
 
 my_ip = requests.get('https://myip.dnsomatic.com/')
 my_ip = str(my_ip.text)
@@ -10,5 +11,7 @@ update_ip_response1 = requests.post(url)
 url = f'https://{return_username(2)}:{return_password(2)}@domains.google.com/nic/update?hostname=www.bengarlock.com&myip={my_ip}'
 update_ip_response2 = requests.post(url)
 
-print(update_ip_response1.text)
-print(update_ip_response2.text)
+with open('ip_log.txt', 'a', encoding='utf-8') as file:
+    file.write(f'{datetime.now()} \t bengarlock.com \t \t {update_ip_response1.text} \n')
+    file.write(f'{datetime.now()} \t www.bengarlock.com \t {update_ip_response2.text} \n')
+
