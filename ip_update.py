@@ -12,6 +12,6 @@ url = f'https://{return_username(2)}:{return_password(2)}@domains.google.com/nic
 update_ip_response2 = requests.post(url)
 
 with open('ip_log.txt', 'a', encoding='utf-8') as file:
-    file.write(f'{datetime.now()} \t bengarlock.com \t \t {update_ip_response1.text} \n')
-    file.write(f'{datetime.now()} \t www.bengarlock.com \t {update_ip_response2.text} \n')
+    file.write(f'{datetime.now()}       bengarlock.com          {update_ip_response1.text} \n')
+    file.write(f'{datetime.now()}       www.bengarlock.com      {update_ip_response2.text} \n')
 
