@@ -1,2 +1,4 @@
 2021-08-05 07:04:08.215291       bengarlock.com          nochg 173.54.163.25
 2021-08-05 07:04:08.215291       www.bengarlock.com      nochg 173.54.163.25 
+2021-08-06 07:28:52.052458       bengarlock.com          badagent 
+2021-08-06 07:28:52.052458       www.bengarlock.com      badagent 
